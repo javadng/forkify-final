@@ -1,7 +1,6 @@
 import View from './View.js';
 import icons from 'url:../../img/icons.svg';
 import * as oddslib from 'oddslib';
-import { Fraction } from 'fractional';
 
 class RecipeView extends View {
   _parentElement = document.querySelector('.recipe');
@@ -125,19 +124,17 @@ class RecipeView extends View {
   }
 
   _generateIngredients(ing) {
-    // const ingNum = ing.quantity
-    //   ? oddslib.from('fractional', ing.quantity).to('fractional')
-    //   : '';
-    // const cleanIng = ingNum.split('').splice(-1, 1) == '1' ? ingNum[0] : ingNum;
-    // ${ing.quantity ? cleanIng : ''}
+    const ingNum = ing.quantity
+      ? oddslib.from('fractional', ing.quantity).to('fractional')
+      : '';
+    const cleanIng = ingNum.split('').splice(-1, 1) == '1' ? ingNum[0] : ingNum;
+    ${ing.quantity ? cleanIng : ''}
     return `
       <li class="recipe__ingredient">
         <svg class="recipe__icon">
           <use href="${icons}#icon-check"></use>
         </svg>
-        <div class="recipe__quantity">${
-          ing.quantity ? new Fraction(ing.quantity).toString() : ''
-        }</div>
+        <div class="recipe__quantity">${ing.quantity ? cleanIng : ''}</div>
         <div class="recipe__description">
           <span class="recipe__unit">${ing.unit}</span>
           ${ing.description}
