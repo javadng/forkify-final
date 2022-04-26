@@ -128,7 +128,7 @@ class RecipeView extends View {
       ? oddslib.from('fractional', ing.quantity).to('fractional')
       : '';
     const cleanIng = ingNum.split('').splice(-1, 1) == '1' ? ingNum[0] : ingNum;
-    ${ing.quantity ? cleanIng : ''}
+
     return `
       <li class="recipe__ingredient">
         <svg class="recipe__icon">
