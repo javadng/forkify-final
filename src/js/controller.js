@@ -7,7 +7,7 @@ import paginationView from './Views/paginationView.js';
 import recipeView from './Views/recipeView.js';
 import searchResultVeiw from './Views/searchResultView.js';
 import searchVeiw from './Views/searchView.js';
-import addRecipeView from './Views/addrecipeView.js';
+import addRecipeView from './Views/addRecipeView.js';
 import { MODAL_CLOSE_SEC } from './config.js';
 
 const controlRecipeLoad = async function () {
