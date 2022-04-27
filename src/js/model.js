@@ -24,6 +24,7 @@ const createRecipeObj = function (data) {
     title: recipe.title,
     ingredients: recipe.ingredients,
     cookingTime: recipe.cooking_time,
+    ...(recipe.key && { key: recipe.key }),
   };
 };
 
