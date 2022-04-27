@@ -25,12 +25,15 @@ class PaginationView extends View {
     // Page one and there are other pages
     if (curPage === 1 && pageNumber > 1) {
       return `
-        <button data-goto="${curPage + 1}" class="btn--inline pagination__btn--next">
+        <button data-goto="${
+          curPage + 1
+        }" class="btn--inline pagination__btn--next">
             <span>Page ${curPage + 1}</span>
             <svg class="search__icon">
                 <use href="${icons}#icon-arrow-right"></use>
             </svg>
         </button>
+        <span class="pagination__pagenumber"> ${curPage} </span>
       `;
     }
 
@@ -45,6 +48,7 @@ class PaginationView extends View {
             </svg>
             <span>Page ${curPage - 1}</span>
         </button>
+        <span class="pagination__pagenumber"> ${curPage} </span>
         <button data-goto="${
           curPage + 1
         }" class="btn--inline pagination__btn--next">
@@ -59,12 +63,15 @@ class PaginationView extends View {
     // Last Page
     if (curPage === pageNumber && pageNumber > 1) {
       return `
-        <button data-goto="${curPage - 1}" class="btn--inline pagination__btn--prev">
+        <button data-goto="${
+          curPage - 1
+        }" class="btn--inline pagination__btn--prev">
             <svg class="search__icon">
                 <use href="${icons}#icon-arrow-left"></use>
             </svg>
             <span>Page ${curPage - 1}</span>
         </button>
+        <span class="pagination__pagenumber"> ${curPage} </span>
       `;
     }
 

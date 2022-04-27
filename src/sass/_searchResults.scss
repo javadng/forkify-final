@@ -12,6 +12,7 @@
 .pagination {
   margin-top: auto;
   padding: 0 3.5rem;
+  position: relative;
 
   &::after {
     content: '';
@@ -26,6 +27,19 @@
     &--next {
       float: right;
     }
+  }
+
+  &__pagenumber {
+    color: #ff6565;
+    background-color: #f9f5f3;
+    border-radius: 2.5rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    display: inline-block;
+    position: absolute;
+    left: 45%;
+    top: -0.2rem;
   }
 }
 
