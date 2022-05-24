@@ -10,4 +10,5 @@ thing that i use
 1) leaflet libray 
 2) use Class base javascript
 3) use promise to work with API 
-4) 
+4) using isNodeEqual to preventing re-render all the page (for better performance)
+5) paginiation with js    
